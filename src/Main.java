@@ -19,5 +19,12 @@ class Main{
 
         listaGlobal.forEach(System.out::println);
 
+        System.out.println("Após Agrupar as listas, em uma apenas");
+        System.out.println("Para exibir numeros pares");
+
+        listaGlobal.stream()
+                .filter(l ->  l % 2 == 0)
+                .forEach(System.out::println);
+
     }
 }
