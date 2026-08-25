@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -25,6 +26,8 @@ class Main{
         produtos.stream()
                 .filter(p -> p.getCategoria().equalsIgnoreCase("Eletrónicos"))
                 .filter(p -> p.getPreco() <= 1000)
+                .sorted(Comparator.comparing(Produto::getPreco))
+                .limit(2)
                 .map(Produto::getNome)
                 .forEach(System.out::println);
     }
