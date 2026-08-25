@@ -13,7 +13,19 @@ class Main{
          que R$ 1000, ordene-ospelo preço em ordem crescente
           e colete o resultado em uma nova lista.
          */
+        List<Produto> produtos = Arrays.asList(
+                new Produto("Mouse Gamer", 199.00, "Eletrónicos"),
+                new Produto("Teclado Mecanico", 299.00, "Eletrónicos"),
+                new Produto("Livro Entendo Algoritmos", 65.00, "Livros"),
+                new Produto("Sofas", 2350.00, "Moveis"),
+                new Produto("Monitor Gamer", 3299.00, "Eletrónicos"),
+                new Produto("Pc Gamer", 7299.00, "Eletrónicos")
+        );
 
-
+        produtos.stream()
+                .filter(p -> p.getCategoria().equalsIgnoreCase("Eletrónicos"))
+                .filter(p -> p.getPreco() <= 1000)
+                .map(Produto::getNome)
+                .forEach(System.out::println);
     }
 }
