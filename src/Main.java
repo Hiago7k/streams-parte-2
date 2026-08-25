@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 class Main{
     static void main() {
@@ -12,7 +13,11 @@ class Main{
                 Arrays.asList(9, 10, 11, 12)
         );
 
+       List<Integer>  listaGlobal =  listaDeNumeros.stream()
+                .flatMap(l -> l.stream())
+                .collect(Collectors.toList());
 
-        listaDeNumeros.forEach(System.out::println);
+        listaGlobal.forEach(System.out::println);
+
     }
 }
