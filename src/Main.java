@@ -4,27 +4,12 @@ import java.util.stream.Collectors;
 
 class Main{
     static void main() {
-       /* 5 - Dada a lista de sublistas de números inteiros abaixo,
-        extraia todos os números primos em uma única lista e os ordene em ordem crescente.
-                */
-                List<List<Integer>> listaDeNumeros = Arrays.asList(
-                Arrays.asList(1, 2, 3, 4),
-                Arrays.asList(5, 6, 7, 8),
-                Arrays.asList(9, 10, 11, 12)
-        );
+        /*
+        6 - Dado um objeto Pessoa com os campos nome e idade,
+        filtre as pessoas com mais de 18 anos, extraia os nomes e
+        imprima-os em ordem alfabética. A classe Pessoa está definida abaixo.
+         */
 
-       List<Integer>  listaGlobal =  listaDeNumeros.stream()
-                .flatMap(l -> l.stream())
-                .collect(Collectors.toList());
-
-        listaGlobal.forEach(System.out::println);
-
-        System.out.println("Após Agrupar as listas, em uma apenas");
-        System.out.println("Para exibir numeros pares");
-
-        listaGlobal.stream()
-                .filter(l ->  l % 2 == 0)
-                .forEach(System.out::println);
 
     }
 }
