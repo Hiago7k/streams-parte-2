@@ -7,27 +7,13 @@ import java.util.stream.Collectors;
 class Main{
     static void main() {
         /*
-        6 - Dado um objeto Pessoa com os campos nome e idade,
-        filtre as pessoas com mais de 18 anos, extraia os nomes e
-        imprima-os em ordem alfabética. A classe Pessoa está definida abaixo.
+       7 - Você tem uma lista de objetos do tipo Produto, onde cada produto
+        possui os atributos nome (String), preco (double) e categoria (String).
+         Filtre todos os produtos da categoria "Eletrônicos" com preço menor
+         que R$ 1000, ordene-ospelo preço em ordem crescente
+          e colete o resultado em uma nova lista.
          */
 
-        List<Pessoa> pessoas  = Arrays.asList(
-            new Pessoa("Hiago", 21),
-            new Pessoa("Ricardo", 20),
-            new Pessoa("Gabriel", 18),
-            new Pessoa("Jose", 10),
-            new Pessoa("Fabio", 15),
-            new Pessoa("Fernando", 16),
-            new Pessoa("Tadeu", 17),
-            new Pessoa("Jean", 26),
-            new Pessoa("Pedro", 63)
-        );
 
-        pessoas.stream()
-                .filter(p -> p.getIdade() > 18)
-                .map(Pessoa::getNome)
-                .sorted()
-                .forEach(System.out::println);
     }
 }
