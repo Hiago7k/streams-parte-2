@@ -1,3 +1,6 @@
+import java.util.Optional;
+import java.util.stream.DoubleStream;
+
 public class Pessoa {
     String nome;
     int idade;
@@ -7,6 +10,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
+
     public String getNome() {
         return nome;
     }
@@ -15,4 +19,4 @@ public class Pessoa {
         return idade;
     }
 }
-}
+
